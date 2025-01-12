@@ -90,16 +90,16 @@ Présentation rapide de l'écosystème
 - ...
 
 <!-- end_slide -->
+<!-- jump_to_middle -->
 
-Codons un peu
+Implémentons la première feature
 ---
-
 
 <!-- end_slide -->
-Les structs
+Récapitulatif
 ---
 
-# Exemple simple
+# Un simple struct
 
 ```rust {1-4|6-22|all} +line_numbers
 struct Person {
@@ -128,10 +128,10 @@ impl Person {
 
 <!-- end_slide -->
 
-Les enums
+Récapitulatif
 ---
 
-# Exemple simple
+# Un simple enum
 
 ```rust {1-4|6-16|all} +line_numbers
 enum Figure {
