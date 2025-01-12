@@ -101,7 +101,7 @@ Les structs
 
 # Exemple simple
 
-``` rust
+```rust {1-4|6-22|all} +line_numbers
 struct Person {
     name: String,
     age: u32,
@@ -109,16 +109,15 @@ struct Person {
 }
 
 impl Person {
-    // Méthode sans référence
     fn new(name: String, age: u32, email: String) -> Person {
+
         Person { name, age, email }
     }
-    // Méthode avec référence immuable
+    
     fn get_name(&self) -> &str {
         &self.name
     }
 
-    // Méthode avec référence mutable
     fn set_email(&mut self, new_email: String) {
         self.email = new_email;
     }
@@ -134,7 +133,7 @@ Les enums
 
 # Exemple simple
 
-``` rust
+```rust {1-4|6-16|all} +line_numbers
 enum Figure {
     Circle { radius: f64 },
     Square { side: f64 },
@@ -142,7 +141,6 @@ enum Figure {
 }
 
 impl Figure {
-    // Méthode pour calculer le périmètre
     fn perimeter(&self) -> f64 {
         match self {
             Figure::Circle { radius } => 2.0 * std::f64::consts::PI * radius,
@@ -153,6 +151,38 @@ impl Figure {
 }
 ```
 
+<!-- end_slide -->
+Le polymorphisme en rust
+---
+
+# Les traits
+``` rust
+// Définition de la structure
+struct Circle {
+    radius: f64,
+}
+
+// Définition d'un trait nommé `Shape` avec une méthode `area`
+trait Shape {
+    fn area(&self) -> f64;
+}
+
+// Implémentation du trait `Shape` pour la structure `Circle`
+impl Shape for Circle {
+    fn area(&self) -> f64 {
+        std::f64::consts::PI * self.radius * self.radius
+    }
+}
+```
+<!-- end_slide -->
+Le polymorphisme en rust
+---
+
+# Les générics
+
+``` rust
+
+```
 <!-- end_slide -->
 
 Gestion de la mémoire
