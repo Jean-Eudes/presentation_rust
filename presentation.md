@@ -91,6 +91,40 @@ Présentation rapide de l'écosystème
 
 <!-- end_slide -->
 <!-- jump_to_middle -->
+Découvrons rust ensemble
+---
+
+<!-- end_slide -->
+Récapitulatif
+---
+``` rust
+fn main() {
+    // Assignation de variable
+    let x = 5;
+    println!("The value of x is: {}", x);
+
+    // Utilisation de mut pour rendre la variable mutable
+    let mut y = 10;
+    println!("The initial value of y is: {}", y);
+    y = 20;
+    println!("The new value of y is: {}", y);
+
+    // Utilisation de tuples
+    let tuple = (1, 2.5, "hello");
+    let (a, b, c) = tuple;
+    println!("The values in the tuple are: {}, {}, and {}", a, b, c);
+
+    // Appel d'une fonction pour afficher une chaîne de caractères
+    display("Hello, Rust!");
+}
+
+// Définition d'une fonction simple pour afficher une chaîne de caractères
+fn display(message: &str) {
+    println!("Message: {}", message);
+}
+```
+<!-- end_slide -->
+<!-- jump_to_middle -->
 
 Implémentons la première feature
 ---
