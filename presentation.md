@@ -13,10 +13,9 @@ Introduction
 
 - Créer un compte bancaire
 - pouvoir faire des dépots et des retraits
-- avoir des notifications SMS et ou mail pour chaque opération
 - avoir des comptes bancaires avec ou sans découvert
 - exposer avec une API REST
-
+- indépendance de la base de données
 
 ## Contrainte technique
 
@@ -27,7 +26,7 @@ Introduction
 
 <!-- end_slide -->
 
-Choix du langage
+Choix du langage - performance
 ---
 
 # Etudes des performances de différents langages
@@ -44,7 +43,25 @@ Choix du langage
 
 <!-- end_slide -->
 
-Choix du langage
+Choix du langage - coût
+---
+
+# Estimation des couts sur aws lambda
+
+Nombre de requête : 20 000 000.
+
+
+| Name | Coût |
+| ------ | ------ |
+| Javascript | 8 736 $ |
+| Scala | 20 000 $ |
+| Python | 2 506.56 $ |
+| Rust | 672 $ |
+
+**lien vers l'étude** [](https://xebia.com/blog/aws-lambda-benchmarking/)
+
+<!-- end_slide -->
+Choix du langage - technique
 ---
 
 # Autres facteurs
@@ -95,7 +112,24 @@ Découvrons rust ensemble
 ---
 
 <!-- end_slide -->
-Récapitulatif
+Récapitulatif : Gestion de la mémoire
+---
+
+# Concept clefs
+
+## Ownership
+
+- Chaque variable rust a **un et un seul** propriétaire.
+- Une fois que la valeur a été transféré (move), elle ne peut plus être utilisée.
+
+## Borrowing
+
+- Les **références** permettent d'emprunter une valeur sans transférer la propriété.
+- Il est possible de prêter **plusieurs fois** une variable en lecture.
+- Il est possible de prêter **qu'une fois** une variable en écriture.
+<!-- end_slide -->
+
+Récapitulatif (concept simple de rust)
 ---
 ``` rust
 fn main() {
@@ -130,7 +164,7 @@ Implémentons la première feature
 ---
 
 <!-- end_slide -->
-Récapitulatif
+Récapitulatif (struct)
 ---
 
 # Un simple struct
@@ -162,7 +196,7 @@ impl Person {
 
 <!-- end_slide -->
 
-Récapitulatif
+Récapitulatif (enum)
 ---
 
 # Un simple enum
@@ -186,6 +220,58 @@ impl Figure {
 ```
 
 <!-- end_slide -->
+
+Les types de données algébriques
+---
+
+![](./mario-finite-state-machine.jpg)
+https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/
+
+<!-- end_slide -->
+
+Les types de données algébriques
+---
+
+<!-- column_layout: [1, 3] -->
+
+<!-- column: 0 -->
+```rust
+#[derive(Clone, PartialEq)]
+enum Character {
+    Mario,
+    SuperMario,
+    FireMario,
+    CapeMario,
+}
+```
+
+``` rust 
+enum Food {
+    MushRoom,
+    Fire,
+    Feather,
+}
+
+```
+
+<!-- column: 1 -->
+``` rust
+impl Character {
+
+    fn eat(&self, food: Food) -> Character {
+        match (self, food) {
+            (Mario, MushRoom) => SuperMario,
+            (Mario | SuperMario | FireMario | CapeMario, Fire) => FireMario,
+            (Mario | SuperMario | FireMario | CapeMario, Feather) => CapeMario,
+            (_, MushRoom) => self.clone(),
+        }
+    }
+    
+}
+```
+
+<!-- end_slide -->
+
 Le polymorphisme en rust
 ---
 
@@ -217,22 +303,5 @@ Le polymorphisme en rust
 ``` rust
 
 ```
-<!-- end_slide -->
-
-Gestion de la mémoire
----
-
-# Concept clefs
-
-## Ownership
-
-- Chaque variable rust a **un et un seul** propriétaire.
-- Une fois que la valeut a été transféré (move), elle ne peut plus être utlisée.
-
-## Borrowing
-
-- Les **références** permettent d'emprunter une valeur sans transférer la propriété
-- Il est possible de prêter une variable en lecture.
-- Il ne peut y avoir qu'une seule référence mutable à la fois.
 <!-- end_slide -->
 
