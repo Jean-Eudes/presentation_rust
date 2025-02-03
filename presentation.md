@@ -40,7 +40,7 @@ Choix du langage - performance
 | Rust | 1.03 | 1.04 | 1.54 |
 
 **lien vers l'étude** [](https://repositorio.inesctec.pt/server/api/core/bitstreams/d606d7dd-be10-4bc7-ada6-5c0c91fe1afb/content)
-
+![image:width:10%](./images/etude_cout_qrcode.png)
 <!-- end_slide -->
 
 Choix du langage - coût
@@ -59,7 +59,7 @@ Nombre de requête : 20 000 000.
 | Rust | 672 $ |
 
 **lien vers l'étude** [](https://xebia.com/blog/aws-lambda-benchmarking/)
-
+![image:width:10%](./images/etude_xebia_qrcode.png)
 <!-- end_slide -->
 Choix du langage - technique
 ---
@@ -224,8 +224,8 @@ impl Figure {
 Les types de données algébriques
 ---
 
-![](./mario-finite-state-machine.jpg)
-https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/
+![](./images/mario-finite-state-machine.jpg)
+**source** https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/
 
 <!-- end_slide -->
 
