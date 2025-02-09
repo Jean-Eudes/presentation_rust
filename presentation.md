@@ -271,6 +271,61 @@ impl Character {
 ```
 
 <!-- end_slide -->
+Retour au code
+---
+
+Implémentons deux petites features supplémentaires :
+
+- On veut pourvoir renvoyer la dernière opération effectuée ;
+- On ne peut pourvoir instancier uniquement un compte bancaire avec un montant posifif.
+
+<!-- end_slide -->
+Gestions des erreurs en rust
+---
+
+# Type Option
+
+Le type *Option* est utilisé pour représenter une valeur qui peut ou non exister. Il a deux variantes :
+
+- ```Some(T)```
+- ```None```
+
+
+# Type Result
+Le type *Result* est utilisé pour représenter le résultat d'une opération qui peut réussir ou échouer. Il a deux variantes :
+- ```Ok(T)```
+- ```Err(E)```
+
+L'opérateur *?* est utilisé pour simplifier la gestion des erreurs lorsqu'on travaille avec des valeurs de type Result. Il permet de propager automatiquement les erreurs vers le code appelant.
+
+``` rust
+fn read_file(file_path: &str) -> Result<String, std::io::Error> {
+    let content = std::fs::read_to_string(file_path)?;
+    Ok(content)
+}
+```
+
+<!-- end_slide -->
+Programmation asynchrone
+---
+
+![image:width:50%](./images/sync-vs-async-schema.jpg)
+**source** https://www.koyeb.com/blog/introduction-to-synchronous-and-asynchronous-processing#executing-tasks-sync-versus-async
+
+<!-- end_slide -->
+Programmation asynchrone en rust
+---
+Jouons un peu avec la programmation asynchrone
+
+
+
+<!-- end_slide -->
+Persistence en rust
+---
+Implémentons la persistence en rust
+
+![image:width:100%](./images/archi_hexa.png)
+<!-- end_slide -->
 
 Le polymorphisme en rust
 ---
@@ -304,4 +359,24 @@ Le polymorphisme en rust
 
 ```
 <!-- end_slide -->
+
+L'asynchrone en rust
+---
+
+faire un schema pour montrer synchrone vs asynchrone
+
+Puis slide pour montrer async / await, join!, JoinSet
+``` rust
+
+```
+
+
+<!-- end_slide -->
+Conclusion
+---
+
+- Des fonctionnalités hauts niveaux, avec les performance du C
+- Un système de mémoire sûre, et sans surcout
+- Un écosystème très riche
+- Une courbe d'apprentissage rude.
 
