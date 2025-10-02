@@ -13,9 +13,8 @@ Introduction
 
 - Créer un compte bancaire
 - pouvoir faire des dépots et des retraits
-- avoir des comptes bancaires avec ou sans découvert
 - exposer avec une API REST
-- indépendance de la base de données
+- utiliser une base de donnée in memory
 
 ## Contrainte technique
 
@@ -40,7 +39,6 @@ Choix du langage - performance
 | Rust | 1.03 | 1.04 | 1.54 |
 
 **lien vers l'étude** [](https://repositorio.inesctec.pt/server/api/core/bitstreams/d606d7dd-be10-4bc7-ada6-5c0c91fe1afb/content)
-![image:width:10%](./images/etude_cout_qrcode.png)
 <!-- end_slide -->
 
 Choix du langage - coût
@@ -59,7 +57,6 @@ Nombre de requête : 20 000 000.
 | Rust | 672 $ |
 
 **lien vers l'étude** [](https://xebia.com/blog/aws-lambda-benchmarking/)
-![image:width:10%](./images/etude_xebia_qrcode.png)
 <!-- end_slide -->
 Choix du langage - technique
 ---
@@ -271,15 +268,6 @@ impl Character {
 ```
 
 <!-- end_slide -->
-Retour au code
----
-
-Implémentons deux petites features supplémentaires :
-
-- On veut pourvoir renvoyer la dernière opération effectuée ;
-- On ne peut pourvoir instancier uniquement un compte bancaire avec un montant posifif.
-
-<!-- end_slide -->
 Gestions des erreurs en rust
 ---
 
@@ -306,27 +294,6 @@ fn read_file(file_path: &str) -> Result<String, std::io::Error> {
 ```
 
 <!-- end_slide -->
-Programmation asynchrone
----
-
-![image:width:50%](./images/sync-vs-async-schema.jpg)
-**source** https://www.koyeb.com/blog/introduction-to-synchronous-and-asynchronous-processing#executing-tasks-sync-versus-async
-
-<!-- end_slide -->
-Programmation asynchrone en rust
----
-Jouons un peu avec la programmation asynchrone
-
-
-
-<!-- end_slide -->
-Persistence en rust
----
-Implémentons la persistence en rust
-
-![image:width:100%](./images/archi_hexa.png)
-<!-- end_slide -->
-
 Le polymorphisme en rust
 ---
 
@@ -350,28 +317,6 @@ impl Shape for Circle {
 }
 ```
 <!-- end_slide -->
-Le polymorphisme en rust
----
-
-# Les générics
-
-``` rust
-
-```
-<!-- end_slide -->
-
-L'asynchrone en rust
----
-
-faire un schema pour montrer synchrone vs asynchrone
-
-Puis slide pour montrer async / await, join!, JoinSet
-``` rust
-
-```
-
-
-<!-- end_slide -->
 Conclusion
 ---
 
@@ -380,3 +325,13 @@ Conclusion
 - Un écosystème très riche
 - Une courbe d'apprentissage rude.
 
+<!-- end_slide -->
+Lien vers le répo
+---
+
+https://github.com/Jean-Eudes/handson_bank_account_rust
+<!-- end_slide -->
+Merci
+---
+
+![](./images/feedback.png)
