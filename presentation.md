@@ -108,6 +108,8 @@ Présentation rapide de l'écosystème
 Découvrons rust ensemble
 ---
 
+![](./images/mario-finite-state-machine.jpg)
+**source** https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/
 <!-- end_slide -->
 Récapitulatif : Gestion de la mémoire
 ---
@@ -215,14 +217,6 @@ impl Figure {
     }
 }
 ```
-
-<!-- end_slide -->
-
-Les types de données algébriques
----
-
-![](./images/mario-finite-state-machine.jpg)
-**source** https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/
 
 <!-- end_slide -->
 
