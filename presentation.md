@@ -1,7 +1,7 @@
 ---
 title: Une courte introduction à rust
 sub_title: "Rust : Un équilibre entre performance et sécurité"
-author: Jean-Eudes Couignoux
+author: Jean-Eudes Couignoux, Youssef Nait Belkacem
 ---
 
 Introduction
@@ -104,7 +104,6 @@ Présentation rapide de l'écosystème
 - ...
 
 <!-- end_slide -->
-<!-- jump_to_middle -->
 Découvrons rust ensemble
 ---
 
@@ -156,12 +155,6 @@ fn display(message: &str) {
     println!("Message: {}", message);
 }
 ```
-<!-- end_slide -->
-<!-- jump_to_middle -->
-
-Implémentons la première feature
----
-
 <!-- end_slide -->
 Récapitulatif (struct)
 ---
@@ -320,12 +313,14 @@ Conclusion
 - Une courbe d'apprentissage rude.
 
 <!-- end_slide -->
-Lien vers le répo
+Lien vers le répository
 ---
+<!-- jump_to_middle -->
 
 https://github.com/Jean-Eudes/handson_bank_account_rust
 <!-- end_slide -->
 Merci
 ---
 
-![](./images/feedback.png)
+![](./images/devfestParis.jpeg)
+<!-- end_slide -->
