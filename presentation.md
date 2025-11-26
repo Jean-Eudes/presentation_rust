@@ -1,8 +1,37 @@
 ---
 title: Une courte introduction à rust
 sub_title: "Rust : Un équilibre entre performance et sécurité"
-author: Jean-Eudes Couignoux, Youssef Nait Belkacem
+authors:
+  - Jean-Eudes Couignoux
+  - Youssef Nait Belkacem
 ---
+
+
+Speakers
+---
+
+<!-- column_layout: [1, 1] -->
+
+<!-- column: 0 -->
+
+![](images/jean-eudes.jpeg)
+_Jean-Eudes Couignoux (capco)_
+
+<!-- column: 1 -->
+![](images/youssef.jpeg)
+_Youssef Nait Belkacem (freelance)_
+
+<!-- end_slide -->
+
+Programme
+---
+<!-- jump_to_middle -->
+
+  - Présentation des spécificités du langage
+  - Live coding
+  - Exercice
+  
+<!-- end_slide -->
 
 Introduction
 ---
@@ -315,12 +344,10 @@ Conclusion
 <!-- end_slide -->
 Lien vers le répository
 ---
-<!-- jump_to_middle -->
 
+![](./images/lien_kata.jpeg)
 https://github.com/Jean-Eudes/handson_bank_account_rust
 <!-- end_slide -->
 Merci
 ---
 
-![](./images/devfestParis.jpeg)
-<!-- end_slide -->
