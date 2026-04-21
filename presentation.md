@@ -25,7 +25,8 @@ _Youssef Nait Belkacem (freelance)_
 
 Programme
 ---
-<!-- jump_to_middle -->
+
+# Programme du workshop
 
   - Présentation des spécificités du langage
   - Live coding
@@ -38,12 +39,19 @@ Introduction
 
 # Création d'une banque en ligne
 
+
+<!-- column_layout: [1, 1] -->
+
+<!-- column: 0 -->
+
 ## fonctionnalité
 
 - Créer un compte bancaire
 - pouvoir faire des dépots et des retraits
 - exposer avec une API REST
 - utiliser une base de donnée in memory
+
+<!-- column: 1 -->
 
 ## Contrainte technique
 
@@ -90,6 +98,11 @@ Nombre de requête : 20 000 000.
 Choix du langage - technique
 ---
 
+<!-- column_layout: [1, 1] -->
+
+<!-- column: 0 -->
+<!-- list_item_newlines: 1 -->
+
 # Autres facteurs
 
 ## Gestion de la mémoire
@@ -98,8 +111,9 @@ Choix du langage - technique
 - Tracing garbage collector (Java, node, ...)
 - Reference Counting (Swift)
 
-Le compilateur de rust est responsable d'ajouter les instructions nécéssaire pour libérer la mémoire.
 
+<!-- column: 1 -->
+<!-- list_item_newlines: 1 -->
 ## Autres features
 * Typage fort
 * Utiliser par des acteurs de l'industrie
@@ -109,11 +123,15 @@ Le compilateur de rust est responsable d'ajouter les instructions nécéssaire p
   * discord
 * Large écosystème
 
+<!-- reset_layout -->
+
+Le compilateur de rust est responsable d'ajouter les instructions nécéssaire pour libérer la mémoire.
 <!-- end_slide -->
 
 Présentation rapide de l'écosystème
 ---
 
+<!-- list_item_newlines: 1 -->
 # Outil de build
 
 - rustup
@@ -156,39 +174,8 @@ Récapitulatif : Gestion de la mémoire
 - Il est possible de prêter **qu'une fois** une variable en écriture.
 <!-- end_slide -->
 
-Récapitulatif (concept simple de rust)
----
-``` rust
-fn main() {
-    // Assignation de variable
-    let x = 5;
-    println!("The value of x is: {}", x);
-
-    // Utilisation de mut pour rendre la variable mutable
-    let mut y = 10;
-    println!("The initial value of y is: {}", y);
-    y = 20;
-    println!("The new value of y is: {}", y);
-
-    // Utilisation de tuples
-    let tuple = (1, 2.5, "hello");
-    let (a, b, c) = tuple;
-    println!("The values in the tuple are: {}, {}, and {}", a, b, c);
-
-    // Appel d'une fonction pour afficher une chaîne de caractères
-    display("Hello, Rust!");
-}
-
-// Définition d'une fonction simple pour afficher une chaîne de caractères
-fn display(message: &str) {
-    println!("Message: {}", message);
-}
-```
-<!-- end_slide -->
 Récapitulatif (struct)
 ---
-
-# Un simple struct
 
 ```rust {1-4|6-22|all} +line_numbers
 struct Person {
@@ -199,28 +186,21 @@ struct Person {
 
 impl Person {
     fn new(name: String, age: u32, email: String) -> Person {
-
         Person { name, age, email }
     }
-    
     fn get_name(&self) -> &str {
         &self.name
     }
-
     fn set_email(&mut self, new_email: String) {
         self.email = new_email;
     }
-
 }
-
 ```
 
 <!-- end_slide -->
 
 Récapitulatif (enum)
 ---
-
-# Un simple enum
 
 ```rust {1-4|6-16|all} +line_numbers
 enum Figure {
@@ -245,7 +225,7 @@ impl Figure {
 Les types de données algébriques
 ---
 
-<!-- column_layout: [1, 3] -->
+<!-- column_layout: [1, 2] -->
 
 <!-- column: 0 -->
 ```rust
@@ -264,7 +244,6 @@ enum Food {
     Fire,
     Feather,
 }
-
 ```
 
 <!-- column: 1 -->
@@ -310,10 +289,8 @@ fn read_file(file_path: &str) -> Result<String, std::io::Error> {
 ```
 
 <!-- end_slide -->
-Le polymorphisme en rust
+Le polymorphisme en rust (les traits)
 ---
-
-# Les traits
 ``` rust
 // Définition de la structure
 struct Circle {
@@ -351,3 +328,4 @@ https://github.com/Jean-Eudes/handson_bank_account_rust
 Merci
 ---
 
+![](./images/lien_devoxx.png)

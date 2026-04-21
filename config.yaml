@@ -1,0 +1,6 @@
+defaults:
+  theme: catppuccin-latte
+  image_protocol: kitty-local
+
+options:
+  list_item_newlines: 2
