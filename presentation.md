@@ -110,7 +110,26 @@ Présentation rapide de l'écosystème
 <!-- jump_to_middle -->
 Découvrons rust ensemble
 ---
+<!-- end_slide -->
+Récapitulatif : Gestion de la mémoire
+---
+# Concept clefs
 
+## Ownership
+``` java
+        InputStream is = new FileInputStream(file);
+
+        closeStream(is); // quelqu’un ferme la ressource
+
+        int data = is.read();
+```
+``` java
+        for (String s : list) {
+            if (s.equals("b")) {
+                list.remove(s);
+            }
+        }
+```
 <!-- end_slide -->
 Récapitulatif : Gestion de la mémoire
 ---
